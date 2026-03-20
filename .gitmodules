@@ -1,0 +1,27 @@
+[submodule "auth-service"]
+	path = auth-service
+	url = https://github.com/Subodhrana390/auth-service.git
+[submodule "user-service"]
+	path = user-service
+	url = https://github.com/Subodhrana390/user-service.git
+[submodule "shop-service"]
+	path = shop-service
+	url = https://github.com/Subodhrana390/shop-service.git
+[submodule "product-service"]
+	path = product-service
+	url = https://github.com/Subodhrana390/product-service.git
+[submodule "inventory-service"]
+	path = inventory-service
+	url = https://github.com/Subodhrana390/inventory-service.git
+[submodule "search-service"]
+	path = search-service
+	url = https://github.com/Subodhrana390/search-service.git
+[submodule "cart-service"]
+	path = cart-service
+	url = https://github.com/Subodhrana390/cart-service.git
+[submodule "order-service"]
+	path = order-service
+	url = https://github.com/Subodhrana390/order-service.git
+[submodule "payment-service"]
+	path = payment-service
+	url = https://github.com/Subodhrana390/payment-service.git
