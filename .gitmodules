@@ -25,3 +25,12 @@
 [submodule "payment-service"]
 	path = payment-service
 	url = https://github.com/Subodhrana390/payment-service.git
+[submodule "delivery-service"]
+	path = delivery-service
+	url = https://github.com/Subodhrana390/delivery-service.git
+[submodule "notification-service"]
+	path = notification-service
+	url = https://github.com/Subodhrana390/notification-service.git
+[submodule "payout-service"]
+	path = payout-service
+	url = https://github.com/Subodhrana390/payout-service.git
