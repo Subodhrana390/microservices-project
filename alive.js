@@ -8,6 +8,8 @@ const apiUrls = [
     "https://yourchemist-backend-deployment-7tur.onrender.com/health",
     "https://yourchemist-backend-deployment-zycv.onrender.com/health",
     "https://payment-service-to80.onrender.com/health",
+    "https://payout-service-69vc.onrender.com/health"
+
 ];
 
 async function callApis() {
