@@ -23,31 +23,27 @@ if (selfUrl) {
         console.log(`Self URL detected and added to ping list: ${formattedSelfUrl}`);
     }
 }
-
 async function callApis() {
-    console.log("\n--- Starting Ping Cycle at:", new Date().toLocaleString() + " ---");
+    console.log("Calling APIs at:", new Date().toLocaleTimeString());
 
-    for (const url of apiUrls) {
-        try {
-            console.log(`Pinging: ${url}`);
+    try {
+        for (const url of apiUrls) {
             const response = await fetch(url);
 
             if (!response.ok) {
-                console.error(`[FAIL] ${url} returned status: ${response.status}`);
-                continue;
+                throw new Error(`Failed: ${url}`);
             }
 
-            const data = await response.json().catch(() => ({ status: "ok" }));
-            console.log(`[SUCCESS] Response from ${url}:`, data);
-        } catch (error) {
-            console.error(`[ERROR] Failed to ping ${url}:`, error.message);
+            const data = await response.json();
+            console.log(`Response from ${url}:`, data);
         }
+
+    } catch (error) {
+        console.error("API error:", error.message);
     }
 
-    console.log("--- Ping Cycle Completed ---\n");
-
-    // Schedule next execution after 12 minutes
-    setTimeout(callApis, 8 * 60 * 1000);
+    // Schedule next execution after 14 minutes
+    setTimeout(callApis, 10* 60 * 1000);
 }
 
 // Start simple HTTP Server to bind to Render's required port if in Web Service mode
